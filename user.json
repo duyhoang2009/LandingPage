@@ -1,0 +1,23 @@
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "email": "duy20091999@gmail.com",
+            "password": 123456,
+            "gendal": "Nam"
+        },
+        {
+            "id": 2,
+            "email": "duy1@gmail.com",
+            "password": 123456,
+            "gendal": "Nam"
+        },
+        {
+            "id": 3,
+            "email": "duy2@gmail.com",
+            "password": 123456,
+            "gendal": "Nam"
+        }
+    ]
+}

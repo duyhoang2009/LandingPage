@@ -1,0 +1,28 @@
+footer {
+    background: #000;
+    height: 60px;
+    .container {
+    }
+    .footer {
+        padding: 18px 0 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .copy {
+            @include text(12px, pb, $lh-text, #b0b0b0, none);
+        }
+        .backtotop {
+            cursor: pointer;
+            @include text(12px, pb, $lh-text, #b0b0b0, uppercase);
+        }
+    }
+
+    @include desktop {
+    }
+    @include tablet {
+    }
+    @include mobile {
+    }
+    @include mobile-xxs {
+    }
+}

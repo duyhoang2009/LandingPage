@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Landing Page</title>
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+    <link rel="stylesheet" href="dest/stylelibs.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <a href="#"><img src="img/logo.png" alt="WOODER">
+                <h1 class="hidden">WOODER</h1>
+            </a>
+            <ul class="menu menuSelected">
+                <li class="items"><a data-id="slider" class="actived" href="#slider">Home</a></li>
+                <li class="items"><a data-id="products" href="#products">Product</a></li>
+                <li class="items"><a data-id="complexity" href="#complexity">Video</a></li>
+                <li class="items"><a data-id="aboutus" href="#aboutus">About</a></li>
+                <li class="items"><a data-id="gallery" href="#gallery">Gallery</a></li>
+                <li class="items"><a data-id="new" href="#new">News</a></li>
+            </ul>
+            <div class="language">
+                <div class="lang">
+                    <div class="lang__current">
+                        <span>EN</span>
+                        <i><img src="img/arrowdown.svg" alt=""></i>
+                    </div>
+                    <div class="lang__select">
+                        <a href="#">VN</a>
+                        <a href="#">JP</a>
+                        <a href="#">AU</a>
+                    </div>
+                </div>
+                <div class="btnmenu"><span></span>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>Home</li>
+                    <li>Product</li>
+                    <li>Video</li>
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>News</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="mainwrap homepage">
+        <section class="slider" id="slider">
+            <div class="carousel">
+                <div class="slider__imgaes">
+                    <div class="slider__imgaes-items">
+                        <div class="text">
+                            <h2 class="title" style="--delay:0.4s">WOODER</h2>
+                            <a class="button" style="--delay:0.6s" href="#">
+                                <span>Learn more</span>
+                                <i><img src="img/arrow.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                    <i><img class="slider-img" src="img/slide-1.png" alt=""></i>
+                </div>
+                <div class="slider__imgaes ">
+                    <div class="slider__imgaes-items">
+                        <div class="text">
+                            <h2 class="title" style="--delay:0.4s">WOODER2</h2>
+                            <a class="button" style="--delay:0.6s" href="#">
+                                <span>Learn more</span>
+                                <i><img src="img/arrow.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                    <i><img class="slider-img" src="img/s5_background.png" alt=""></i>
+                </div>
+                <div class="slider__imgaes">
+                    <div class="slider__imgaes-items">
+                        <div class="text">
+                            <h2 class="title" style="--delay:0.4s">WOODER3</h2>
+                            <a class="button" style="--delay:0.6s" href="#">
+                                <span>Learn more</span>
+                                <i><img src="img/arrow.png" alt=""></i>
+                            </a>
+                        </div>
+                    </div>
+                    <i><img class="slider-img" src="img/ruben-mishchuk-4fN3ahxzlOg-unsplash .jpg" alt=""></i>
+                </div>
+            </div>
+            <div class="slider__bottom">
+                <div class="container-fluid">
+                    <div class="paging">
+                        <div class="number">01</div>
+                        <div class="dotted"></div>
+                    </div>
+                    <div class="mouse">
+                        <img src="img/mouse_arrow_down.png" alt="" class="mouse__img">
+                        <img src="img/arrow_down.png" alt="" class="mouse__arrowdown">
+                    </div>
+                    <div class="control">
+                        <div class="control__btn --prev"> <img src="img/arrow.png" alt=""></div>
+                        <div class="control__btn --next"> <img src="img/arrow.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="products" id="products">
+            <div class="container">
+                <div class="products__box">
+                    <div class="products__box-content">
+                        <div class="text --textbox">
+                            <h2 class="title --has-line">Furniture</h2>
+                            <h3 class="des">Wooder utilizes materials otherwise left behind, rendered useless in their
+                                original intent.
+                                By creating new pieces made of reclaimed barnwood</h3>
+                            <a class="btnMore" href="#">Learn more<img src="img/s2_arrow.png" alt=""></a>
+                        </div>
+                        <div class="img"><i><img src="img/s2_img_top.png" alt=""></i></div>
+                    </div>
+                    <div class="products__box-content --reverse">
+                        <div class="text --textbox">
+                            <h2 class="title --has-line">Decor</h2>
+                            <h3 class="des">We make all types of wooden decor as per design given by Architect,Interior
+                                designer, contractor which is suitable
+                                your premises.</h3>
+                            <a class="btnMore" href="#">Learn more<img src="img/s2_arrow.png" alt=""></a>
+                        </div>
+                        <div class="img"> <i><img src="img/s2_img_mid.png" alt=""></i></div>
+                    </div>
+                </div>
+                <div class="products__video">
+                    <div class="products__video-text --textbox">
+                        <h2 class="title --has-line">wooder – is quality</h2>
+                        <h3 class="des">We create unique design objects made of rare wood, specially under the order.
+                            Look at the short video about our work.</h3>
+                    </div>
+                    <div class="products__video-list">
+                        <div class="video">
+                            <div class="images">
+                                <img class="img" src="img/s6_img_bot_2.png" alt="">
+                                <img data-video-src="n_yFk-pWnVU" class="playbutton" src="img/play_button.png" alt="">
+                            </div>
+                            <div class="videotext">
+                                <p>Innovative Design</p>
+                            </div>
+                        </div>
+                        <div class="video">
+                            <div class="images">
+                                <img class="img" src="img/s2_img_bot_2.png" alt="">
+                                <img data-video-src="H1hgtCjdb0Y" class="playbutton" src="img/play_button.png" alt="">
+                            </div>
+                            <div class="videotext">
+                                <p>High-level Skills</p>
+                            </div>
+                        </div>
+                        <div class="video">
+                            <div class="images">
+                                <img class="img" src="img/s2_img_bot_3.png" alt="">
+                                <img data-video-src="dm8LRgmTxoQ" class="playbutton" src="img/play_button.png" alt="">
+                            </div>
+                            <div class="videotext">
+                                <p>Quality Products</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="complexity pdS" id="complexity">
+            <div class="container">
+                <div class="complexity__text --textbox">
+                    <div class="text">
+                        <h2 class="title"> we Do the design of any complexity</h2>
+                        <h3 class="des">This is a team of professionals that make the furniture and wood décor high
+                            standard. Creating modern designs.Adhering to the global quality standards. And we are doing
+                            work with love. </h3>
+                        <a class="btn" href="#"><img src="img/play-button.svg" alt="">Watch video</a>
+                    </div>
+        </section>
+        <section class="aboutus pdS" id="aboutus">
+            <div class="container">
+                <div class="aboutus__row">
+                    <div class="aboutus__row-img">
+                        <img src="img/s4_img.png" alt="">
+                    </div>
+                    <div class="aboutus__row-text --textbox">
+                        <h2 class="title --has-line"> About us</h2>
+                        <h3 class="des"> We are a team of professionals in the wood processing and the creation of
+                            wooden
+                            furniture of the highest class</h3>
+                        <a href="#" class="btnMore">Learn more<img src="img/s2_arrow.png" alt=""> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery pdS" id="gallery">
+            <div class="container">
+                <div class="gallery__text --textbox">
+                    <h2 class="title">Gallery</h2>
+                    <h3 class="des"> We are a team of professionals in the wood processing and the creation of wooden
+                        furniture of the highest class</h3>
+                </div>
+                <div class="gallery__imgaes">
+                    <div class="imgae1 image"><i><img src="img/s5_img_1_top.png" alt=""></i> </div>
+                    <div class="imgae2 image"><i><img src="img/s5_img_1_bot.png" alt=""></i></div>
+                    <div class="imgae3 image"><i><img src="img/s5_img_2.png" alt=""></i></div>
+                    <div class="imgae4 image"><i><img src="img/s5_img_3_top.png" alt=""></i></div>
+                    <div class="imgae5 image"><i><img src="img/s5_img_3_bot.png" alt=""></i></div>
+                </div>
+            </div>
+        </section>
+        <section class="new pdS" id="new">
+
+            <div class="container">
+                <div class="new__text --textbox">
+                    <h2 class="title">News</h2>
+                    <p class="des --black">We are a team of professionals in the wood processing and the creation of
+                        wooden
+                        furniture of the highest class</p>
+                </div>
+                <div class="new__imageslist">
+                    <div class="new__imageslist-box">
+                        <div class="imgaes">
+                            <i><img src="img/s6_img_top_1.png" alt=""></i>
+                        </div>
+                        <div class="text --textbox">
+                            <h3 class="title --h3">Where does it come from?</h3>
+                            <p class="des --black">Contrary to popular belief, Lorem Ipsum is not simply random text. It
+                                has
+                                roots in a piece of classical Latin literatur...</p>
+                        </div>
+                    </div>
+                    <div class="new__imageslist-box">
+                        <div class="imgaes">
+                            <i><img src="img/s6_img_top_2.png" alt=""></i>
+                        </div>
+                        <div class="text --textbox">
+                            <h3 class="title --h3">There are many variations of passages</h3>
+                            <p class="des --black">Contrary to popular belief, Lorem Ipsum is not simply random text. It
+                                has roots in a
+                                piece of classical Latin literatur...</p>
+                        </div>
+                    </div>
+                    <div class="new__imageslist-box">
+                        <div class="imgaes">
+                            <i><img src="img/s6_img_top_3.png" alt=""></i>
+                        </div>
+                        <div class="text --textbox">
+                            <h3 class="title --h3">It is a long established fact that a reader</h3>
+                            <p class="des --black">Contrary to popular belief, Lorem Ipsum is not simply random text. It
+                                has roots in a
+                                piece of classical Latin literatur...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="new__imgaes">
+                <img src="img/s6_img_bot_3.png" alt="">
+                <img src="img/ruben-mishchuk-4fN3ahxzlOg-unsplash .jpg" alt="">
+                <img src="img/s6_img_bot_2.png" alt="">
+                <img src="img/s6_img_bot_4.png" alt="">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="copy"> © 2016 WOODER, Demo by CFD</div>
+                <div class="logo"><a href="#"><img src="img/logo.png" alt=""></a> </div>
+                <div class="backtotop">Back To Top</div>
+            </div>
+        </div>
+    </footer>
+</body>
+<div class="BTT"></div>
+<div class="popup-video">
+    <div class="wrap">
+        <img src="" alt="">
+        <iframe width="560" height="315" src="" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <div class="close">x</div>
+    </div>
+
+
+
+</div>
+<div class="member">
+    <div class="member__form">
+        <h1>Đăng ký tài khoản</h1>
+        <div class="form">
+            <form action="" name="myForm" onsubmit="return(validate());">
+                <table cellpacing="2" cellpadding="2" border="1">
+                    <tr>
+                        <td align="left">Name</td>
+                        <td class="input"><input type="text" name="Name" id="Name"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Email</td>
+                        <td class="input"><input type="text" name="Mail" id="Mail"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Gioi Tinh</td>
+                        <td class="input"><input type="text" name="Sex" id="Sex"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Ngay thang nam sinh</td>
+                        <td class="input"><input type="text" name="Birthday" id="Birthday"></td>
+                    </tr>
+                </table>
+            </form>
+            <div class="btn-dk">Đăng ký</div>
+        </div>
+    </div>
+</div>
+<div class="login">
+    <h1> Đăng Nhập</h1>
+    <form method="POST">
+        <div class="form-group" id="name">
+            <label>Email </label>
+            <input type="text" name="email">
+            <div class="noEmpty">
+                <h4>*Email ko đúng định dạng</h4>
+                <p>*Vui lòng nhập email</p>
+            </div>
+        </div>
+        <div class="form-group" id="password">
+            <label>Password </label>
+            <input type="text" name="password">
+            <div class="noEmpty">
+                <p>*Vui lòng nhập mật khẩu</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="button" id="submitForm">Login</button>
+        </div>
+    </form>
+</div>
+<script src="js/libs/jquery.js"></script>
+<script src="js/libs//flickity.pkgd.min.js"></script>
+<script language="javascript" src="dest/main.js"></script>
+
+</html>

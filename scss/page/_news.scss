@@ -1,0 +1,40 @@
+.new {
+    &__text {
+        &.--textbox {
+            width: 444px;
+        }
+    }
+    &__imageslist {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 200px 200px;
+        gap: 10px;
+        &-box {
+            .imgaes {
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                img {
+                    min-width: 100%;
+                    min-height: 100%;
+                    object-fit: cover;
+                    @include mid();
+                }
+            }
+        }
+    }
+    &__imgaes {
+        position: relative;
+        // @include midflex();
+        // @include mid();
+        overflow: hidden;
+        img {
+            // overflow: hidden;
+            height: 400px;
+
+            margin: 0px 15px;
+            // top: 50%;
+            // transform: translateY(-50%);
+        }
+    }
+}

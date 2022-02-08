@@ -1,0 +1,259 @@
+.--textbox {
+    --wBefore: 80px;
+    .title {
+        @include text(40px, pb, $lh-text, $text-cl, uppercase);
+        &.--has-line {
+            position: relative;
+            &::before {
+                content: "";
+                width: var(--wBefore);
+                height: 2px;
+                background: $gray-cl;
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                transform: translate(-100%, -50%);
+            }
+        }
+        &.--h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            height: 44px;
+            @include overtext(2);
+        }
+    }
+    .des {
+        padding: 15px 0 24px 0;
+        color: $gray-cl;
+        &.--black {
+            color: $black-cl;
+            @include overtext(3);
+            padding: 0px;
+        }
+    }
+}
+
+.BTT {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    &.hover {
+        opacity: 1;
+        pointer-events: auto;
+        transition: 0.3s;
+    }
+}
+.popup-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(0%);
+    transition: 0.4s;
+    &.select {
+        opacity: 1;
+        pointer-events: auto;
+        // transform: translateY(20%);
+        transition: 0.4s;
+    }
+    .wrap {
+        padding: 5px;
+        background-image: url("/img/s5_background.png");
+        position: relative;
+        top: -20%;
+        transition: 0.3s;
+        &.selected {
+            transform: translateY(20%);
+            transition: 0.3s;
+        }
+    }
+    .close {
+        cursor: pointer;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -20px;
+        right: -20px;
+    }
+}
+
+.nav {
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    transform: scaleY(0);
+    transform-origin: center top;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+        cursor: pointer;
+        li {
+            text-align: center;
+            @include text(16px, pb, normal, #ffffff, uppercase);
+            padding: 25px 15px;
+            text-decoration: none;
+        }
+    }
+    &.show {
+        opacity: 1;
+        pointer-events: auto;
+        transition: 0.4s;
+        transform: scaleY(1);
+        transform-origin: center bottom;
+    }
+}
+.member {
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &__form {
+        position: relative;
+        font-family: bold;
+        border: 2px solid $main-cl;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        h1 {
+            width: auto;
+            height: 40px;
+            @include midflex();
+            //
+            // margin-bottom: 20px;
+            font-size: 28px;
+            text-transform: uppercase;
+            background-color: $main-cl;
+        }
+        .form {
+            height: 456px;
+            form {
+                width: 100%;
+                height: 355px;
+                padding: 35px;
+                table {
+                    width: 100%;
+                    height: 100%;
+                    tr {
+                        td {
+                            margin: 10px 0 0px 43px;
+                            font-size: 18px;
+                            display: inline-block;
+                            &.input {
+                                display: block;
+                                width: 80%;
+                                input {
+                                    width: 100%;
+                                    margin: auto;
+                                    border: 1px solid #d3d3d3;
+                                    height: 25px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn-dk {
+                position: absolute;
+                cursor: pointer;
+                left: 50%;
+                transform: translateX(-50%);
+                border: 1px solid #000;
+                border-color: $main-cl;
+                font-size: 30px;
+                padding: 10px;
+                background: #ffffff;
+                transition: 0.3s;
+                &:hover {
+                    background: $main-cl;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+}
+.items {
+    position: relative;
+    a::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #ffffff;
+        opacity: 0.8;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transform: scaleX(0);
+        transition: 0.3s;
+    }
+    a:hover {
+        &::before {
+            transform: scaleX(1);
+            transition: 0.3s;
+        }
+    }
+    .actived {
+        &::before {
+            transform: scaleX(1);
+            transition: 0.3s;
+        }
+    }
+}
+.login {
+    display: none;
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    .form-group {
+        .noEmpty {
+            display: inline-block;
+            p {
+                display: none;
+                color: red;
+            }
+            h4 {
+                display: none;
+                color: red;
+            }
+        }
+    }
+}

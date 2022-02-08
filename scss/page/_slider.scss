@@ -1,0 +1,232 @@
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    .carousel {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        .slider__imgaes {
+            display: block;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            .slider-img {
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+            &-items {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .text {
+                    @include mid();
+                    .title {
+                        font-size: 83.33px;
+                        color: #bea67c;
+                        letter-spacing: 1px;
+                        font-family: pb;
+                    }
+                    .button {
+                        padding: 10px 30px;
+                        display: table;
+                        border: 1px solid #fff;
+                        margin: 20px auto;
+                        text-transform: uppercase;
+                        position: relative;
+                        text-decoration: none;
+                        z-index: 10;
+                        &::after {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background: #bea67c;
+                            position: absolute;
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            transform: scaleX(0);
+                            transition: 0.4s;
+                            transform-origin: left;
+                        }
+                        &:hover {
+                            &::after {
+                                transform: scaleX(1);
+                                transition: 0.4s;
+                                transform-origin: right;
+                            }
+                        }
+                        span {
+                            color: #ffffff;
+                            letter-spacing: 1px;
+                            font-family: pb;
+                            font-size: 15px;
+                            padding: 10px 20px;
+                        }
+                        img {
+                            width: 30px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .slider__imgaes .slider__imgaes-items .text .title,
+        .slider__imgaes .slider__imgaes-items .text .button {
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            transform: translateY(50px);
+            transition-delay: calc(var(--delay)+0.1s);
+        }
+        .slider__imgaes.is-selected .slider__imgaes-items .text .title,
+        .slider__imgaes.is-selected .slider__imgaes-items .text .button {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s;
+            transform: translateY(0px);
+            transition-delay: calc(var(--delay) + 0.4s);
+        }
+    }
+    &__bottom {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        padding: 30px 15px;
+        justify-content: space-between;
+        .container-fluid {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1;
+            position: relative;
+            .paging {
+                display: flex;
+                align-items: center;
+                .number {
+                    @include text(44px, pb, normal, #bea67c, uppercase);
+                }
+                &::before {
+                    content: "";
+                    width: 45px;
+                    background: #bea67c;
+                    height: 4px;
+                    margin-right: 15px;
+                }
+                ol {
+                    display: flex;
+                    bottom: 20px;
+                    li {
+                        &.is-selected {
+                            background: #bea67c;
+                        }
+                    }
+                }
+            }
+            .mouse {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -10%);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &__img {
+                    width: 20px;
+                    height: 30px;
+                    margin-bottom: 20px;
+                }
+                &__arrowdown {
+                    margin: 10px;
+                    width: 10px;
+                    height: 60px;
+                    position: relative;
+                    animation: mymove 2s infinite;
+                }
+                @include tablet {
+                    &__img {
+                        display: none;
+                    }
+                }
+            }
+            .control {
+                display: flex;
+                &__btn {
+                    cursor: pointer;
+                    border: 1px solid $white-cl;
+                    padding: 8px 10px;
+                    position: relative;
+                    // chon nhung doi tuong. tuong tu.
+                    &:after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background: #bea67c;
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        transform: scaleX(0);
+                        transition: $t;
+                        transform-origin: left;
+                    }
+                    &:hover {
+                        &::after {
+                            transform: scaleX(1);
+                            transition: $t;
+                            transform-origin: right;
+                        }
+                    }
+                    &.--prev {
+                        img {
+                            transform: rotate(180deg);
+                            transition: $t;
+                        }
+                    }
+                    &.--next {
+                        margin-left: -1px;
+                    }
+                }
+            }
+        }
+    }
+    @include tablet {
+        height: 70vh;
+        overflow: hidden;
+        &__imgaes {
+            &-items {
+                .text {
+                    .title {
+                        font-size: 50px;
+                    }
+                    .button {
+                        padding: 10px 10px;
+                        span {
+                            font-size: 10px;
+                            padding: 0 10px;
+                        }
+                        img {
+                            width: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes mymove {
+    from {
+        top: -10px;
+    }
+    to {
+        top: 15px;
+    }
+}
